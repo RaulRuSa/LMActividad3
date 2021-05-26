@@ -10,19 +10,29 @@
                 <header>
                     <h1><xsl:value-of select="ite/@nombre"/></h1>
                 </header>
-                <main>
-                <nav>
+                <section>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="#profes">Profesores</a></li>
+                        <li><a href="#direccion">Equipo directivo</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+
+
+                    <!--
                     <h3 class="nombre_empresa"><xsl:value-of select="ite/empresa"/></h3>
                     <div class="datos_nav">Telefono:
                         <a><xsl:attribute name="href">
-                            <xsl:value-of select="ite/telefono"/></xsl:attribute><!--enlace-->
-                            <xsl:value-of select="ite/telefono"/> <!-- texto-->
+                            <xsl:value-of select="ite/telefono"/></xsl:attribute>
+                            <xsl:value-of select="ite/telefono"/>
                         </a>
                         <a><xsl:attribute name="href">
-                            <xsl:value-of select="ite/@nombre"/></xsl:attribute><!--enlace-->
-                            <xsl:value-of select="ite/@nombre"/> <!-- texto-->
+                            <xsl:value-of select="ite/@nombre"/></xsl:attribute>
+                            <xsl:value-of select="ite/@nombre"/>
                         </a>
                     </div>
+                -->
                 </nav>   
                 
                 
@@ -43,26 +53,29 @@
                                  <td><xsl:value-of select="nombre"/></td>  
                              </tr>
                         </xsl:for-each> 
-                    </tbody>  
-                    
+                    </tbody>       
                 </table>
 
-                <p>Jefe de estudios</p>
-                <ul>
-                    
-                    <li>Nombre:<xsl:value-of select="ite/jefe_estudios/nombre"/></li>
-                    <li>Despacho:<xsl:value-of select="ite/jefe_estudios/despacho"/></li>
-                </ul>
+                <section id="direccion">
+                    <article>
+                        <p>Jefe de estudios</p>
+                        <ul>
+                            <li>Nombre:<xsl:value-of select="ite/jefe_estudios/nombre"/></li>
+                            <li>Despacho:<xsl:value-of select="ite/jefe_estudios/despacho"/></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <p>Director</p>
+                        <ul>
+                            <li>Nombre:<xsl:value-of select="ite/director/nombre"/></li>
+                            <li>Despacho:<xsl:value-of select="ite/director/despacho"/></li>
+                        </ul>
+                    </article>
+                </section>
 
-                <p>Director</p>
-                <ul>
-                   
-                    <li>Nombre:<xsl:value-of select="ite/director/nombre"/></li>
-                    <li>Despacho:<xsl:value-of select="ite/director/despacho"/></li>
-                </ul>
 
                <!--Tabla CICLOS--> 
-                <table>
+                <table id="cursos">
                 <caption>TABLA CICLOS</caption>
                     <thead>
                         <tr>
@@ -93,34 +106,49 @@
                             </tr>
                     </tbody>      
                 </table>    
+
+
                 <form action="servido.php" method="get">
-                    <fieldset><legend>Solicitud de información</legend>
+                    <fieldset><legend><h2>Solicitud de información</h2></legend>
                         <div>
-                            <P>Datos Personales</P>
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre"/>
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" id="apellidos" name="apellidos"/>
+                            <h3>Datos Personales</h3>
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre"/>
+                            </div>
+                            <div>
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" id="apellidos" name="apellidos"/>
+                            </div>
+                            <div>
+                                <label for="mail">Email</label>
+                                <input type="email" id="mail" name="mail"/>
+                            </div>
                         </div>
-                        <div>
-                            <p>Seleccione los cursos sobre los que desea informacion</p>
-                            <label for="asir">ASIR</label>
-                            <input type="checkbox" id="asir" name="asir" value="true"/>
-                            <label for="asir">DAW</label>
-                            <input type="checkbox" id="daw" name="daw" value="true"/>
-                            <label for="asir">DAM</label>
-                            <input type="checkbox" id="dam" name="dam" value="true"/>
+                        <div class="checkbox">
+                            <h3>Seleccione los cursos sobre los que desea informacion</h3>
+                            <div>
+                                <input type="checkbox" id="asir" name="asir" value="true"/>
+                                <label for="asir">ASIR</label>
+                                <input type="checkbox" id="daw" name="daw" value="true"/>
+                                <label for="asir">DAW</label>
+                                <input type="checkbox" id="dam" name="dam" value="true"/>
+                                <label for="asir">DAM</label>
+                            </div>
+
                         </div>
-                        <div>
-                            <p>Observaciones</p>
-                            <textarea name="observaciones" rows="5" cols="50"/>
+                        <div class="textarea">
+                            <h3>Observaciones</h3>
+                            <textarea name="observaciones" rows="5" cols="50" placeholder="Siguessiendounhijoputa"></textarea>
                         </div>
-                        <input class="boton" type="submit" value="Enviar"/>
-                        <input class="boton" type="reset" value="Limpiar Formulario"/>
-    
+                        <div class="submit-reset">
+                            <input class="boton" type="submit" value="Enviar formulario"/>
+                            <input class="boton" type="reset" value="Limpiar"/>
+                        </div>
+
                     </fieldset>
                 </form>          
-                </main>
+            </section>
                  
             </body>
             

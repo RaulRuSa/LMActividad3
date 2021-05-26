@@ -8,39 +8,154 @@ html, body {
     height:100%;
 }
 header {
-    
+    padding-top: 30px;
     text-align: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../img/BannerLogo.png");
-    background-color: #d5d3d3;
-    background-blend-mode: screen;
+    height: 100px;
+    background-color: rgb(8, 8, 46);
+    color: rgb(255, 255, 255);
 }
 nav{
     text-align: center;
-        
+    width: 100%;
+    background-color: rgb(1, 1, 8);
+    color: white;
 }
-.datos_nav{
-    text-align: center;
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
 }
-main {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../img/fondo.jpg");
-    background-color: #d5d3d3;
-    background-blend-mode: screen;
+
+nav li {
+    width: 25%;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+nav a:hover {
+    background-color: rgb(221, 80, 14);
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        width: 100%;
+    }
+}
+
+caption {
+    font-size: 16px;
+}
+
+section {
+    background-color:rgb(184, 187, 207);
+    color: black;
 }
 form{
-
-    margin: 1rem auto;
+    margin: 3rem auto;
     width:80%;
-    
     box-shadow: 0px 0px 20px rgb(71, 71, 71);
+    background-color: rgb(152, 182, 221);
+    border-radius: .5rem;
+
 }
+
+form h3 {
+    font-size: 17px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+legend h2 {
+    font-size: 20px;
+    font-weight: 900;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    color:rgb(0, 0, 94);
+    text-align: center;
+}
+
+label {
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    height: 25px;
+    margin: 10px;
+    border-radius: .5rem;
+}
+
+
+input[name="mail"] {
+    margin-bottom: 30px;
+}
+
+input[name="observaciones"] {
+    width: 100%;
+}
+
+
+
+
+
+input[type="reset"],
+input[type="submit"]:hover {
+    background-color:rgb(216, 214, 214);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(221, 80, 14);
+}
+
+input[type="reset"]:hover,
+input[type="submit"] {
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color:rgb(221, 80, 14);
+    color: white;
+}
+
+.checkbox, .textarea {
+    padding-left: 5px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.checkbox div, .textarea div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+label[for="asir"],
+label[for="daw"] {
+    padding-right: 15px;
+}
+
+textarea {
+    width: 90%;
+    resize: none;
+    border-radius: 1rem;
+
+}
+
+textarea::placeholder {
+    padding: 10px;
+}
+
 a{
     text-decoration: none;
     color:cornflowerblue;
@@ -56,11 +171,32 @@ table{
     border:solid;
     margin:2rem auto;
     text-align: center;
+    width: 80%;
 }
+
+table th {
+    background-color:rgb(8, 8, 46);
+    color: white;
+}
+
+
 tr:nth-child(even){
-    background-color:d5d3d3 ;
+    background-color: #d5d3d3;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(166, 169, 177, 0.904);
 }
 .boton{
     margin: 0.5rem;
     padding:0.4rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.submit-reset {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
