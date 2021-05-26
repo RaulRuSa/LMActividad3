@@ -155,8 +155,13 @@ input[type="submit"] {
     justify-content: center;
 }
 
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
 label[for="asir"],
 label[for="daw"] {
+    margin: 0;
     padding-right: 15px;
 }
 

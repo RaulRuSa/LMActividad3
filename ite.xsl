@@ -139,7 +139,7 @@
                         </div>
                         <div class="textarea">
                             <h3>Observaciones</h3>
-                            <textarea name="observaciones" rows="5" cols="50" placeholder="Siguessiendounhijoputa"></textarea>
+                            <textarea name="observaciones" rows="5" cols="50" placeholder="Pregúntanos lo que quieras"></textarea>
                         </div>
                         <div class="submit-reset">
                             <input class="boton" type="submit" value="Enviar formulario"/>
