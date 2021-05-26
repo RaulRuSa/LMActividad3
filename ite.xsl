@@ -56,19 +56,19 @@
                     </tbody>       
                 </table>
 
-                <section id="direccion">
+                <section class="direccion">
                     <article>
-                        <p>Jefe de estudios</p>
+                        <h2>Jefe de estudios</h2>
                         <ul>
-                            <li>Nombre:<xsl:value-of select="ite/jefe_estudios/nombre"/></li>
-                            <li>Despacho:<xsl:value-of select="ite/jefe_estudios/despacho"/></li>
+                            <li>Nombre: <xsl:value-of select="ite/jefe_estudios/nombre"/></li>
+                            <li>Despacho: <xsl:value-of select="ite/jefe_estudios/despacho"/></li>
                         </ul>
                     </article>
                     <article>
-                        <p>Director</p>
+                        <h2>Director</h2>
                         <ul>
-                            <li>Nombre:<xsl:value-of select="ite/director/nombre"/></li>
-                            <li>Despacho:<xsl:value-of select="ite/director/despacho"/></li>
+                            <li>Nombre: <xsl:value-of select="ite/director/nombre"/></li>
+                            <li>Despacho: <xsl:value-of select="ite/director/despacho"/></li>
                         </ul>
                     </article>
                 </section>
@@ -110,7 +110,7 @@
 
                 <form action="servido.php" method="get">
                     <fieldset><legend><h2>Solicitud de información</h2></legend>
-                        <div>
+                        <div class="datos-per">
                             <h3>Datos Personales</h3>
                             <div>
                                 <label for="nombre">Nombre</label>
