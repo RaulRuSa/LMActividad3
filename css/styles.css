@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height:100%;
+}
+header {
+    
+    text-align: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/BannerLogo.png");
+    background-color: #d5d3d3;
+    background-blend-mode: screen;
+}
+nav{
+    text-align: center;
+        
+}
+.datos_nav{
+    text-align: center;
+}
+main {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/fondo.jpg");
+    background-color: #d5d3d3;
+    background-blend-mode: screen;
+}
+form{
+
+    margin: 1rem auto;
+    width:80%;
+    
+    box-shadow: 0px 0px 20px rgb(71, 71, 71);
+}
+a{
+    text-decoration: none;
+    color:cornflowerblue;
+}
+fieldset{
+    border:none;
+}
+
+legend, fieldset label{
+    margin:0.2rem 0.5rem;
+}
+table{
+    border:solid;
+    margin:2rem auto;
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color:d5d3d3 ;
+}
+.boton{
+    margin: 0.5rem;
+    padding:0.4rem;
+}
