@@ -18,7 +18,7 @@
                         <li><a href="#cursos">Cursos</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
-
+            
 
                     <!--
                     <h3 class="nombre_empresa"><xsl:value-of select="ite/empresa"/></h3>
@@ -108,7 +108,7 @@
                 </table>    
 
 
-                <form action="servido.php" method="get">
+                <form id="contacto" action="servido.php" method="get">
                     <fieldset><legend><h2>Solicitud de información</h2></legend>
                         <div class="datos-per">
                             <h3>Datos Personales</h3>
@@ -151,7 +151,19 @@
             </section>
                  
             </body>
-            
+            <footer>
+                <ul>
+                    <li>Telefono:
+                        <a><xsl:attribute name="href">
+                            <xsl:value-of select="ite/telefono"/></xsl:attribute>
+                            <xsl:value-of select="ite/telefono"/>
+                        </a></li>
+                    <li><a><xsl:attribute name="href">
+                        <xsl:value-of select="ite/@web"/></xsl:attribute>
+                        <xsl:value-of select="ite/@nombre"/>
+                    </a></li>
+                </ul>
+            </footer>            
         </html>
     </xsl:template>
 </xsl:stylesheet>
