@@ -18,25 +18,8 @@
                         <li><a href="#cursos">Cursos</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
-            
-
-                    <!--
-                    <h3 class="nombre_empresa"><xsl:value-of select="ite/empresa"/></h3>
-                    <div class="datos_nav">Telefono:
-                        <a><xsl:attribute name="href">
-                            <xsl:value-of select="ite/telefono"/></xsl:attribute>
-                            <xsl:value-of select="ite/telefono"/>
-                        </a>
-                        <a><xsl:attribute name="href">
-                            <xsl:value-of select="ite/@nombre"/></xsl:attribute>
-                            <xsl:value-of select="ite/@nombre"/>
-                        </a>
-                    </div>
-                -->
                 </nav>   
-                
-                
-                
+
                 <!--tabla ID PROFESORES-->
                 <table id="profes">
                     <caption>TABLA ID PROFESORES</caption>
@@ -56,6 +39,7 @@
                     </tbody>       
                 </table>
 
+                <!--EQUIPO DIRECTIVO-->
                 <section id="direccion">
                     <article>
                         <h2>Jefe de estudios</h2>
@@ -107,7 +91,7 @@
                     </tbody>      
                 </table>    
 
-
+                <!-- FORMULARIO -->
                 <form id="contacto" action="servido.php" method="get">
                     <fieldset><legend><h2>Solicitud de información</h2></legend>
                         <div class="datos-per">
@@ -128,12 +112,18 @@
                         <div class="checkbox">
                             <h3>Seleccione los cursos sobre los que desea informacion</h3>
                             <div>
-                                <input type="checkbox" id="asir" name="asir" value="true"/>
-                                <label for="asir">ASIR</label>
-                                <input type="checkbox" id="daw" name="daw" value="true"/>
-                                <label for="daw">DAW</label>
-                                <input type="checkbox" id="dam" name="dam" value="true"/>
-                                <label for="dam">DAM</label>
+                                <div>
+                                    <input type="checkbox" id="asir" name="asir" value="true"/>
+                                    <label for="asir">ASIR</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="daw" name="daw" value="true"/>
+                                    <label for="daw">DAW</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="dam" name="dam" value="true"/>
+                                    <label for="dam">DAM</label>
+                                </div>
                             </div>
 
                         </div>
@@ -149,21 +139,30 @@
                     </fieldset>
                 </form>          
             </section>
-                 
-            </body>
+
+            <!-- BOTÓN VOLVER -->
+            <div class="volver">
+                <a class="boton" href="#menu"><button name="volver">Volver</button></a>     
+            </div>
+            
+            <!-- FOOTER -->
             <footer>
                 <ul>
                     <li>Telefono:
                         <a><xsl:attribute name="href">
                             <xsl:value-of select="ite/telefono"/></xsl:attribute>
                             <xsl:value-of select="ite/telefono"/>
-                        </a></li>
-                    <li><a><xsl:attribute name="href">
-                        <xsl:value-of select="ite/@web"/></xsl:attribute>
-                        <xsl:value-of select="ite/@nombre"/>
-                    </a></li>
+                        </a>
+                    </li>
+                    <li>
+                        <a><xsl:attribute name="href">
+                            <xsl:value-of select="ite/@web"/></xsl:attribute>
+                            <xsl:value-of select="ite/@nombre"/>
+                        </a>
+                    </li>
                 </ul>
             </footer>            
+            </body>
         </html>
     </xsl:template>
 </xsl:stylesheet>
