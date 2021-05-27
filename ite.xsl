@@ -3,7 +3,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+                <link rel="stylesheet" type="text/css" href="css/styles3.css"/>
                 <title><xsl:value-of select="ite/@nombre"/></title>
             </head>
             <body>
@@ -131,9 +131,9 @@
                                 <input type="checkbox" id="asir" name="asir" value="true"/>
                                 <label for="asir">ASIR</label>
                                 <input type="checkbox" id="daw" name="daw" value="true"/>
-                                <label for="asir">DAW</label>
+                                <label for="daw">DAW</label>
                                 <input type="checkbox" id="dam" name="dam" value="true"/>
-                                <label for="asir">DAM</label>
+                                <label for="dam">DAM</label>
                             </div>
 
                         </div>
