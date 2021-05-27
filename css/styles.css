@@ -62,7 +62,7 @@ section {
     color: black;
 }
 
-.direccion {
+#direccion {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -70,11 +70,11 @@ section {
     align-items: center;
 }
 
-.direccion article {
+#direccion article {
     margin-bottom: 30px;
 }
 
-.direccion article ul {
+#direccion article ul {
     list-style: none !important;
 }
 

@@ -56,7 +56,7 @@
                     </tbody>       
                 </table>
 
-                <section class="direccion">
+                <section id="direccion">
                     <article>
                         <h2>Jefe de estudios</h2>
                         <ul>
