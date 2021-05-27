@@ -38,7 +38,7 @@
                 
                 
                 <!--tabla ID PROFESORES-->
-                <table>
+                <table id="profes">
                     <caption>TABLA ID PROFESORES</caption>
                     <thead>
                         <tr>
