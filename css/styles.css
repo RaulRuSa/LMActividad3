@@ -4,12 +4,18 @@
     margin: 0;
 }
 
+/*
+Tenemos fondo negro por defecto, fuente arial
+y una altura que cubra el contenido */
 body {
     height: min-content;
     font-family:Arial, Helvetica, sans-serif;
     background-color:black;
 
 }
+
+/*El header tiene fondo amarillo y color gris para la letra
+con alineación al centro */
 header {
     padding-top: 30px;
     text-align: center;
@@ -19,6 +25,7 @@ header {
 }
 
 /* ------------------- NAVEGADOR ------------------- */
+/*Para el nav tenemos invertidos los colores del header */
 nav{
     text-align: center;
     width: 100%;
@@ -26,6 +33,7 @@ nav{
     color:rgb(239, 229, 85);
 }
 
+/* Para la lista tenemos un flex row */
 nav ul {
     display: flex;
     flex-direction: row;
@@ -34,10 +42,12 @@ nav ul {
     justify-content: space-around;
 }
 
+/*Cada elemento li ocupará un 25%*/
 nav li {
     width: 25%;
 }
 
+/*Ponemos los links en amarillo sin decorado para los links*/
 nav a {
     display: block;
     text-decoration: none;
@@ -59,13 +69,9 @@ nav a:hover {
     }
 }
 
-/* a{
-    text-decoration: none;
-    color:cornflowerblue;
-} */
 
 /* ------------------- tablas ID PROFESORES / CICLOS ------------------- */
-
+/* Estableceremos ancho máximo en profes y cursos */
 #profes {
     max-width: 600px;
 }
@@ -74,6 +80,20 @@ nav a:hover {
     max-width: 700px;
 }
 
+/*Ponemos los links en amarillo sin decorado para los links*/
+#cursos a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(239, 229, 85);
+}
+
+#cursos a:hover {
+    color: rgb(148, 143, 69);
+}
+
+/* El título de la tabla será amarillo, y le daremos
+estilo custom a la fuente, así como padding-bottom */
 caption {
     font-size: 22px;
     font-weight: 500;
@@ -82,13 +102,15 @@ caption {
     text-align: center;
 }
 
+/* Tenemos margen vertical de 2 rem y horizontal automático */
 table{
     color: rgb(222, 219, 181);
-    margin:2rem auto;
+    margin: 2rem auto;
     text-align: center;
     width: 50%;
 }
 
+/* Padding vertical de 5 px para los td/th */
 th, td {
     padding: 5px 0;
 }
@@ -114,6 +136,7 @@ section {
     color:rgb(239, 229, 85);
 }
 
+/* Haremos un flex colum del equipo directivo */
 #direccion {
     display: flex;
     flex-direction: column;
@@ -128,17 +151,19 @@ section {
 }
 
 #direccion ul{
+    /* Eliminamos los puntos de la lista */
     list-style: none;
 }
 
 #direccion li{
+    /* Identamos los textos de cada elemento li */
     text-indent: 20px;
 }
 
 
 
 /* ------------------- FORMULARIO ------------------- */
-
+/*Quitamos el border del fieldset */
 fieldset{
     border:none;
 }
@@ -147,6 +172,8 @@ legend, fieldset label{
     margin:0.2rem 0.5rem;
 }
 
+/*Tenemos width del 80% con margen vertical de 3 rem y automático
+para horizontal. Añadiremos un shadow y un border-radius */
 form{
     max-width: 700px;
     margin: 3rem auto;
@@ -156,6 +183,8 @@ form{
     border-radius: .1rem;
 }
 
+/* El h2 de leyenda tiene padding izquierdo e inferior, con
+fuente customizada en tamaño y grosor */
 legend h2 {
     font-size: 22px;
     font-weight: 900;
@@ -165,6 +194,8 @@ legend h2 {
     text-align: center;
 }
 
+/* Los h3 tienen estas customizaciones, pero con la letra más pequeña
+y con menos peso */
 form h3 {
     font-size: 20px;
     font-weight: 800;
@@ -184,6 +215,10 @@ label {
     padding: 20px;
 }
 
+/*Ponemos borde inferior en los input de texto
+y email, del gris usado con anterioridad,
+además de establecer width, heigh, padding y margin
+superior e inferior*/
 input[type="text"],
 input[type="email"] {
     font-size: 16px;
@@ -194,11 +229,6 @@ input[type="email"] {
     margin-bottom: 10px;
     background-color: rgb(222, 219, 181);
     border: 0px;
-}
-
-input[name="mail"],
-input[name="nombre"],
-input[name="apellidos"] {
     margin-bottom: 30px;
     border-bottom: 2px solid rgb(148, 147, 152);
 }
@@ -207,6 +237,9 @@ input[name="observaciones"] {
     width: 100%;
 }
 
+/*Tendremos invertidos los colores en los botones submit
+y reset --> amarillo el de enviar que se vuelve gris
+y viceversa*/
 input[type="reset"],
 input[type="submit"]:hover {
     background-color:rgb(148, 147, 152);
@@ -224,16 +257,12 @@ input[type="submit"] {
     color: rgb(148, 147, 152);
 }
 
-/* background-color:rgb(239, 229, 85); YELLOW
-    color: rgb(148, 147, 152); GRAY */
-
-
 .checkbox, .textarea {
     padding-left: 5px;
     padding-bottom: 40px;
     text-align: center;
 }
-
+/*Tenemos un flex en el div de checkbox y en el de textarea */
 .checkbox div, .textarea div {
     display: flex;
     flex-direction: row;
@@ -241,18 +270,20 @@ input[type="submit"] {
 }
 
 input[type="checkbox"] {
+    margin-top: 5%;
     margin-right: 5px;
 }
 
-label[for="asir"],
-label[for="daw"],
-label[for="dam"] {
+#cursosCheckbox label{
     margin: 0;
     padding-left: 5px;
     padding-right: 15px;
 }
 
+/*Tenemos padding en el textarea, para evitar que el texto
+se pegue a los extremos de la caja */
 textarea {
+    padding: 10px;
     font-size: 16px;
     width: 90%;
     resize: none;
@@ -261,20 +292,19 @@ textarea {
 }
 
 textarea::placeholder {
-    padding: 10px;
     font-size: 0.8rem;
     font-weight: 500;
     color:rgb(72, 72, 72);
 }
 
+/*Eliminamos los bordes de los botones */
 .boton{
     margin: 0.5rem;
     padding:0.4rem;
     cursor: pointer;
-    
     border: 0;
 }
-
+/* Hacemos un flex row con los botones de enviar-resetar */
 .submit-reset {
     width: 100%;
     display: flex;
@@ -302,7 +332,8 @@ textarea::placeholder {
 }
 
 /* ------------------- FOOTER ------------------- */
-
+/* Alineamos al centro, ponemos height fija
+y establecemos colores */
 footer {
     height: 50px;
     text-decoration: none;
@@ -312,22 +343,26 @@ footer {
     color: rgb(148, 147, 152);
 }
 
+/* Eliminamos los puntos de la lista del footer */
 footer ul{
     list-style: none;
 }
 
+/* Hacemos inline-block para cada elemento del footer */
 footer li{
     display: inline-block;
     margin-right: 25px;
     margin-top: 15px;
 }
 
+/* Eliminamos la decoración de enlaces y ponemos margin inferior */
 footer a{
     margin-bottom: 15px;
     color: rgb(148, 147, 152);
     text-decoration: none;
 }
 
+/* Al hacer hover sobre los enlaces se volverán negros */
 footer a:hover {
     color: black;
 }
