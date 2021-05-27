@@ -3,7 +3,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <link rel="stylesheet" type="text/css" href="css/styles3.css"/>
+                <link rel="stylesheet" type="text/css" href="css/styles.css"/>
                 <title><xsl:value-of select="ite/@nombre"/></title>
             </head>
             <body>

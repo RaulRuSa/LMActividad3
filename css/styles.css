@@ -74,6 +74,10 @@ section {
     margin-bottom: 30px;
 }
 
+.direccion article ul {
+    list-style: none !important;
+}
+
 
 form{
     margin: 3rem auto;
